@@ -1,0 +1,6 @@
+framework module Pods_Startt {
+  umbrella header "Pods-Startt-umbrella.h"
+
+  export *
+  module * { export * }
+}
