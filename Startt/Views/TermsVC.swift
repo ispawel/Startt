@@ -15,8 +15,8 @@ class TermsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Present and Dismiss"
+        view.backgroundColor = UIColor(white: 0.8, alpha: 1)
+        //title = "Start Terms VC"
         
         clickModalToTermsVC()
         setBtnShowTerms()
@@ -36,7 +36,7 @@ class TermsVC: UIViewController {
         view.addSubview(present)
     }
     
-    //Modal Transitioin to TermsVC
+    //Modal Transitioin to view text TermsVC
     @objc func clickModalToTermsVC(){
         let termsVCmodal = termsVCmodal()
         termsVCmodal.modalPresentationStyle = .formSheet
@@ -66,14 +66,10 @@ class termsVCmodal: UIViewController {
     func setNavBar() {
         let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
         view.addSubview(navBar)
-
         let navItem = UINavigationItem(title: "Условия")
-        let acceptItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(acceptButton))
-        acceptItem.title = "Принять"
+        let acceptItem = UIBarButtonItem(title: "Принять", style: .plain, target: self, action: #selector(acceptButton))
         navItem.rightBarButtonItem = acceptItem
-
         navBar.setItems([navItem], animated: false)
-
     }
     
     //Setup Terms Text
@@ -91,8 +87,6 @@ class termsVCmodal: UIViewController {
             make.left.equalTo(view).inset(20)
             make.right.equalTo(view).inset(15)
             make.top.equalTo(view).inset(80)
-            //make.centerY.equalTo(self.view)
-            //make.centerX.equalTo(self.view)
         }
         
     }
