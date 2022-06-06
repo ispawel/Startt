@@ -11,8 +11,6 @@ import SnapKit
 
 class LoadingVC: UIViewController {
     
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setLoadingUI()

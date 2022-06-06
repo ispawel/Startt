@@ -10,19 +10,13 @@ import UIKit
 
 class BlockScreenVC: UIViewController {
     
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setBlockScreenVCUI()
-        
     }
     
     func setBlockScreenVCUI() {
-       
         view.backgroundColor = .white
-        
         //Unclock Image
         let unclokImg = "unclokImg"
         let unclockImage = UIImage(named: unclokImg)
@@ -32,10 +26,5 @@ class BlockScreenVC: UIViewController {
             make.centerY.equalTo(self.view)
             make.centerX.equalTo(self.view)
         }
-        
-        
-        
     }
-    
-    
 }

@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 import SnapKit
 
-
-
 class TermsVC: UIViewController {
     
     override func viewDidLoad() {
@@ -22,7 +20,6 @@ class TermsVC: UIViewController {
         setBtnShowTerms()
         
     }
-    
     
     //Show Terms button
     func setBtnShowTerms() {
@@ -47,9 +44,6 @@ class TermsVC: UIViewController {
 }
 
 
-
-
-
 class termsVCmodal: UIViewController {
     
     
@@ -67,8 +61,8 @@ class termsVCmodal: UIViewController {
         let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
         view.addSubview(navBar)
         let navItem = UINavigationItem(title: "Условия")
-        let acceptItem = UIBarButtonItem(title: "Принять", style: .plain, target: self, action: #selector(acceptButton))
-        navItem.rightBarButtonItem = acceptItem
+        let acceptItemButton = UIBarButtonItem(title: "Принять", style: .plain, target: self, action: #selector(acceptButton))
+        navItem.rightBarButtonItem = acceptItemButton
         navBar.setItems([navItem], animated: false)
     }
     
